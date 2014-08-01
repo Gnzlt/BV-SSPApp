@@ -1,0 +1,17 @@
+.center {
+	margin-left: auto;
+	margin-right: auto;
+	display: block;
+}
+
+.imagen-logo {
+	margin-bottom: 10px;
+}
+
+.celda-ancho {
+	padding: 11px 15px 11px 15px;
+}
+
+.subnav {
+	margin-top: 50px;
+}

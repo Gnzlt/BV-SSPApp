@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="utf-8">
+    <title>BV-SSPApp</title>
+
+    <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no, minimal-ui">
+
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+
+    <link rel="stylesheet" href="css/ratchet.min.css">
+    <link rel="stylesheet" href="css/ratchet-theme-android.min.css">
+    <link rel="stylesheet" href="css/custom.css">
+
+    <script src="js/ratchet.min.js"></script>
+  </head>
+  <body>
+
+    <div class="content">
+      <div class="card">
+        <ul class="table-view">
+          <li class="table-view-cell table-view-divider"><h4>Login</h4></li>
+          <li class="table-view-cell celda-ancho">
+
+            <form accept-charset="UTF-8" action="https://ws001.juntadeandalucia.es/bvsspa/gpoa/gpoa/cookie_handler.cgi/PAPIASRedirector" method="GET">
+              <input type="hidden" value="123456789012345" name="PAPIPOAREF">
+              <input type="hidden" value="/index.html" name="PAPIPOAURL">
+              <p><strong>Seleccione su procedencia:</strong></p>
+              <select name="ASID">
+                <option value="ConsejeriaSaludAS">Consejería y Delegaciones de Salud</option>
+                <option value="MyASsasp">SAS - Servicio Andaluz de Salud</option>
+                <option value="EPESJIcGPoA">EPES - Empresa Pública de Emergencias Sanitarias</option> 
+                <option value="ASPIcGPoA">E.P. Hospital Costa del Sol</option> 
+                <option value="ACSA">Agencia de Calidad Sanitaria de Andalucía</option>
+                <option value="AETSA">Agencia de Evaluación de Tecnologias Sanitarias de Andalucía</option> 
+                <option value="EPHPOAS">Agencia Pública Empresarial Sanitaria Hospital de Poniente</option>
+                <option value="EPHAGAS">Agencia Sanitaria Alto Guadalquivir</option>
+                <option value="EPSBG">Agencia Pública Empresarial Sanitaria Bajo Guadalquivir</option>
+                <option value="SJDAS">Consorcio Sanitario Público del Aljarafe</option>                    
+                <option value="EASP">Escuela Andaluza de Salud Pública</option>
+                <option value="FAISEM">FAISEM</option>     
+                <option value="FPYS">Fundación Progreso y Salud</option>    
+                <option value="BIONAND">BIONAND</option> 
+                <option value="BIOBANCO">BIOBANCO</option>
+                <option value="CABIMER">CABIMER</option>
+                <option value="FABIS">FABIS</option>
+                <option value="FCADIZ">FCADIZ</option>                                                
+                <option value="FIBAO">FIBAO</option>
+                <option value="FIBICO">FIBICO</option> 
+                <option value="FIMABIS">FIMABIS</option>
+                <option value="FISEVI">FISEVI</option>
+                <option value="GENYO">GENYO</option> 
+                <option value="IBIMA">IBIMA</option>
+                <option value="IBIS">IBIS</option>
+                <option value="IMIBIC">IMIBIC</option>
+                <option value="BVSSPA">Biblioteca Virtual SSPA</option>
+                <option value="MyASnonsasp">Otras instituciones SSPA</option>                  
+              </select>
+              <button class="btn btn-positive btn-block" type="submit" style="margin-top:10px">Entrar</button>
+              <a class="btn btn-link btn-block" href="index.html">Omitir</a>
+            </form>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </body>
+</html>

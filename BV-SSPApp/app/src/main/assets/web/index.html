@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="utf-8">
+    <title>BV-SSPApp</title>
+
+    <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no, minimal-ui">
+
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+
+    <link rel="stylesheet" href="css/ratchet.min.css">
+    <link rel="stylesheet" href="css/ratchet-theme-android.min.css">
+    <link rel="stylesheet" href="css/custom.css">
+
+    <script src="js/ratchet.min.js"></script>
+  </head>
+  <body>
+    <nav class="bar bar-standard">
+        <div class="segmented-control">
+              <a class="control-item active" href="#item1mobile">
+                BV-SSPA
+              </a>
+              <a class="control-item" href="#item2mobile">
+                PubMed
+              </a>
+              <a class="control-item" href="#item3mobile">
+                Repositorio
+              </a>
+              <a class="control-item" href="#item4mobile">
+                UpToDate
+              </a>
+        </div>
+    </nav>
+
+    <div class="content subnav">
+        <div class="card">
+          <span id="item1mobile" class="control-content active">
+            <ul class="table-view">
+                <li class="table-view-cell table-view-divider"><h4>Revistas-e de la BV-SSPA</h4></li>
+                <li class="table-view-cell celda-ancho">
+
+                    <img class="imagen-logo center" src="images/bvsspa.png" width="180px" alt="BVSSPA">
+
+                    <form accept-charset="UTF-8" action="http://gerion.greendata.es:443/sfxlcl3/az/default" method="GET" >
+                        <input id="param_pattern_value" type="search" name="param_pattern_value" placeholder="Revista" />
+                            <p>
+                                <input id="startsWith" type="radio" name="param_textSearchType_value" value="startsWith" />
+                                <label for="startsWith">Empieza por</label><br>
+                                <input id="contains" type="radio" checked="checked" name="param_textSearchType_value" value="contains" />
+                                <label for="contains">Contiene</label><br>
+                                <input id="exactMatch" type="radio" name="param_textSearchType_value" value="exactMatch" />
+                                <label for="exactMatch">Es exactamente igual</label>
+                            </p>
+                        <button class="btn btn-positive btn-block" type="submit" style="margin-top:10px">Buscar</button>
+                    </form>
+                </li>
+            </ul>
+          </span>
+          <span id="item2mobile" class="control-content">
+            <ul class="table-view">
+                <li class="table-view-cell table-view-divider"><h4>PubMed a través de BV-SSPA</h4></li>
+                <li class="table-view-cell celda-ancho">
+
+                    <img class="imagen-logo center" src="images/pubmed.png" width="180px" alt="Pubmed">
+
+                    <form accept-charset="UTF-8" id="pubmedsearchform1" class="search-form" action="http://www.ncbi.nlm.nih.gov/entrez/query.fcgi" method="GET" name="search" >
+                        <input id="pubmedsearch" name="term" type="search" placeholder="Palabras clave o PMID" />
+                        <input name="otool" type="hidden" value="iesandlib" />
+                        <button class="btn btn-positive btn-block" type="submit">Buscar</button>
+                    </form>
+                </li>
+            </ul>
+          </span>
+          <span id="item3mobile" class="control-content">
+            <ul class="table-view">
+                <li class="table-view-cell table-view-divider"><h4>Repositorio SSPA</h4></li>
+                <li class="table-view-cell celda-ancho">
+
+                    <img class="imagen-logo center" src="images/repoSSPA.png" width="180px" alt="Repositorio SSPA">
+
+                    <form method="GET" action="http://www.repositoriosalud.es/simple-search">
+                        <input type="search" id="tquery" name="query" placeholder="Texto a buscar">
+                        <button class="btn btn-positive btn-block" type="submit">Buscar</button>
+                        <p><small>* Las palabras introducidas serán buscadas en los campos de título, autor, palabras clave, abstract, resumen, patrocinador, título de revista e identificadores (ISSN, DOI, DL, PMID...).</small></p>
+                    </form>
+                </li>
+            </ul>
+          </span>
+          <span id="item4mobile" class="control-content">
+            <ul class="table-view">
+                <li class="table-view-cell table-view-divider"><h4>UpToDate</h4></li>
+                <li class="table-view-cell celda-ancho">
+
+                    <img class="imagen-logo center" src="images/uptodate.png" width="180px" alt="Repositorio SSPA">
+
+                    <form method="GET" action="http://ws003.juntadeandalucia.es:2080/contents/search">
+                        <input type="text" placeholder="Texto a buscar" name="search" id="txtSearch">
+                        <input type="hidden" value="0" name="sp" id="spinput">
+                        <input type="hidden" value="0" name="searchType" id="searchType">
+                        <input type="hidden" id="source" value="USER_INPUT" name="source">
+                        <input type="hidden" id="searchControl" value="TOP_PULLDOWN" name="searchControl">
+                        <input type="hidden" value="" name="searchOffset">
+                        <button class="btn btn-positive btn-block" type="submit">Buscar</button>
+                    </form>
+                </li>
+            </ul>
+          </span>
+        </div>
+    </div>
+  </body>
+</html>
